@@ -1,0 +1,17 @@
+.header-container {
+  height: 60px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid lightgray;
+}
+.brand-name {
+  color: #000000;
+}
+.profile-icon {
+  width: 2rem;
+  border-radius: 50px;
+}
