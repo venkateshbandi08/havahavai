@@ -7,14 +7,14 @@
 This project is a web application to display all the details of hava havai website's UI and airports list.
 
 ## Technologies Used:
-- **Frontend:** React, adobe react-spectrum
+- **Frontend:** React, adobe react-spectrum, react-router-dom
 - HTML, CSS, JS, ReactJS
 
 ## Features
-- **view** Can see the list of airports in the havahavai site
-- **Delete** can Delete the airports from the mockDB
-- **Navigation page to each airport** can navigate to airport's page by clicking on a particular airport in the list
-- **Terminals** Can see the aiport terminals
+- **view:** Can see the list of airports in the havahavai site
+- **Delete:** can Delete the airports from the mockDB
+- **Navigation page to each airport:** can navigate to airport's page by clicking on a particular airport in the list
+- **Terminals:** Can see the aiport terminals
 
 
 ## Setup Instructions
