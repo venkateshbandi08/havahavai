@@ -19,6 +19,7 @@ import {
   Text,
 } from "@adobe/react-spectrum";
 import { ComboBox, Section } from "@adobe/react-spectrum";
+
 import { RxDotsHorizontal } from "react-icons/rx";
 import { FaPlus } from "react-icons/fa";
 import { CgSoftwareUpload } from "react-icons/cg";
@@ -54,11 +55,6 @@ const AirportDetails = () => {
     },
   ];
   const [selectedTab, setSelectedTab] = useState(1);
-  const [isToggleOn, setIsToggleOn] = useState(false);
-
-  const handleToggle = () => {
-    setIsToggleOn(!isToggleOn);
-  };
 
   if (!airport) {
     return <div>Loading...</div>;
@@ -117,10 +113,10 @@ const AirportDetails = () => {
               </div>
             ))}
             <DialogTrigger>
-              <button className="add-button-terminal">
-                <FaPlus />
-                Add Terminal
-              </button>
+              <ActionButton>
+                <FaPlus style={{ width: "0.7rem", paddingTop: "0.2rem" }} /> Add
+                Terminal
+              </ActionButton>
               {(close) => (
                 <Dialog>
                   <Heading>Add New Terminal</Heading>
@@ -185,7 +181,7 @@ const AirportDetails = () => {
                     />
                   </div>
                   <div className="form-item">
-                    <ComboBox label="Favorite Animal">
+                    <ComboBox label="Category">
                       <Item key="1">Option 1</Item>
                       <Item key="2">Option 2</Item>
                       <Item key="3">Option 3</Item>
@@ -194,7 +190,7 @@ const AirportDetails = () => {
                     </ComboBox>
                   </div>
                   <div className="form-item">
-                    <ComboBox label="Favorite Animal">
+                    <ComboBox label="Sub Category">
                       <Item key="1">Option 1</Item>
                       <Item key="2">Option 2</Item>
                       <Item key="3">Option 3</Item>
@@ -202,34 +198,20 @@ const AirportDetails = () => {
                       <Item key="5">Option 5</Item>
                     </ComboBox>
                   </div>
-                  <div className="upload-and-toggle">
-                    <button
-                      style={{ marginRight: "1rem" }}
-                      className="modal-button-upload-bottom"
-                    >
-                      <CgSoftwareUpload />
-                      Upload
-                    </button>
-                    <div
-                      className={`toggle-button ${isToggleOn ? "active" : ""}`}
-                      onClick={handleToggle}
-                    >
-                      <div className="toggle-circle"></div>
-                    </div>
-                    <p style={{ marginTop: "1rem" }}> show image </p>
-                  </div>
+                  <button
+                    style={{ marginRight: "18rem" }}
+                    className="modal-button-upload-bottom"
+                  >
+                    <CgSoftwareUpload />
+                    Upload
+                  </button>
                 </div>
-                <button
-                  style={{ marginLeft: "6rem", marginTop: "1rem" }}
-                  className="add-button"
-                >
-                  Save
-                </button>
+                <button className="add-button">Save</button>
               </div>
               <div className="form-item-bottom">
                 <TextField
                   label="Description"
-                  value="name"
+                  value="type here"
                   //   onChange={setValue}
                 />
               </div>
